@@ -21,4 +21,6 @@ var balance = await balanceFunction.CallAsync<int>(newAddress);
 
 - `CallAsync`: Sử dụng với các hàm chỉ truy vấn các giá trị trên mạng blockchain. Ví dụ: `balanceOf`, `getOwner`
 - `SendTransactionAsync` và `SendTransactionAndWaitForReceiptAsync`: Gọi các hàm mà hàm đó thực hiện các thay đổi dữ liệu và tạo 1 giao dịch trên blockchain.included in the next block. Ví dụ: `transfer`, `transferFrom`.
+  + `SendTransactionAsync`: Thực hiện 1 chức năng có thay đổi trạng thái trên blockchain và không đợi đến khi nó được xác nhận.
+  + `SendTransactionAndWaitForReceiptAsync`: Đợi transaction được khai thác và đóng block.
 - `EstimateGasAsync`: Mô phỏng giao dịch để ước lượng số lượng gas cần thiết để thực hiện giao dịch chính thức.
